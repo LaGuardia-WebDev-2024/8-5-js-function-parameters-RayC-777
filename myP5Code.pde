@@ -1,5 +1,6 @@
 //🟢Setup Procedure - Runs Once to Set The Canvas
 setup = function(){
+   
   size(600, 400); 
   background(52, 168, 83); // green grass
 
@@ -12,7 +13,13 @@ setup = function(){
   drawExtraDirt(230,190);
   drawExtraDirt(110,110);
   drawExtraDirt(330,50);
-}
+  
+  drawMole (200, 185);
+  drawMole (297, 335);
+  drawMole (70, 105);
+  drawMole (300, 45);
+  };
+  
 
 //🟢drawExtraDirect Function - custom function created by Ms. Hall
 var drawExtraDirt = function(dirtX, dirtY){
@@ -23,12 +30,10 @@ var drawExtraDirt = function(dirtX, dirtY){
 };
 
 //🟢drawMole Function - custom function created for this lesson
-var drawMole = function() {
-    var moleX = 248;
-    var moleY = 185;
-
+var drawMole = function(moleX, moleY) {
+    
     noStroke();
-    fill(125, 93, 43);
+   fill(random(0,255), random(0,255), random(0,255));;
     ellipse(moleX, moleY, 60, 60); // face
     fill(255, 237, 209);
     ellipse(moleX, moleY+10, 33, 28); 
